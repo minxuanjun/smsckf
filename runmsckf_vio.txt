@@ -1,0 +1,10 @@
+
+*install
+sudo apt-get install libsuitesparse-dev
+*compile
+cd your_work_space
+catkin_make --pkg msckf_vio --cmake-args -DCMAKE_BUILD_TYPE=Release
+*test
+roslaunch msckf_vio msckf_d435i.launch
+
+
