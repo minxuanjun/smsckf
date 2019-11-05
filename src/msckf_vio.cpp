@@ -309,7 +309,6 @@ void MsckfVio::initializeGravityAndBias()
     double gravity_norm = gravity_imu.norm();
     IMUState::gravity = Vector3d(0.0, 0.0, -gravity_norm);
 
-    // Eigen 创建的的quatenion是q_iv -> Rv_i
     // 为了使用统一的惯例,所以可以将所有的Quaternioned 按照自己的标准转换为旋转矩阵,
     // 然后按照新的标准,转化为新的Quaternion
     Quaterniond q0_i_w = Quaterniond::FromTwoVectors(
